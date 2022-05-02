@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
-apply plugin: 'com.github.dcendents.android-maven'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -9,20 +7,18 @@ android {
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
 
-    versionCode Integer.parseInt(project.VERSION_CODE)
-    versionName project.VERSION_NAME
 
-    vectorDrawables.useSupportLibrary = true
+      vectorDrawables.useSupportLibrary = true
   }
 
-  lintOptions {
-    abortOnError false
-  }
 
-  compileOptions {
+    compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
+    lint {
+        abortOnError false
+    }
 }
 
 group = "com.github.prolificinteractive"
