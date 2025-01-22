@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import org.threeten.bp.LocalDate;
+import java.time.LocalDate;
 
 /**
  * An imputable representation of a day on a calendar, based on {@link LocalDate}.
